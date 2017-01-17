@@ -82,10 +82,15 @@ tts:
 
 group:
     bedroom_lights:
+        - group.bed_accent_lights
+        - group.bed_lights
+    bed_lights:
         - light.alicias_light
         - light.mikes_light
+    bed_accent_lights:
         - switch.closet_light
         - switch.dresser_light
+
 
 ###################################
 #
@@ -117,4 +122,34 @@ emulated_hue:
 #media_player:
 #  - platform: vlc
 
+####################################
+#
+#
+#           Scene's
+#   
+#
+####################################
+
+
+scene:
+    - name: Bedroom Normal
+      entities:
+          group.bed_lights:
+              state: on
+              brightness: 250
+          group.bed_accent_lights:
+              state: on
+    - name: Bedroom Movie
+      entities:
+          group.bed_lights:
+              state: on
+              brightness: 60
+          group.bed_accent_lights:
+              state: off
+    - name: Bedroom Off
+      entities:
+          group.bed_lights
+              state: off
+          group.bed_accent_lights:
+              state: off
 
