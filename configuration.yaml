@@ -11,9 +11,6 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Toronto
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables the frontend
 frontend:
 
@@ -86,7 +83,9 @@ tts:
 group:
     bedroom_lights:
         - light.alicias_light
-        - switch.mikes_light
+        - light.mikes_light
+        - switch.closet_light
+        - switch.dresser_light
 
 ###################################
 #
