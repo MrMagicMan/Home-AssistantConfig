@@ -148,7 +148,7 @@ scene:
               state: off
     - name: Bedroom Off
       entities:
-          group.bed_lights
+          group.bed_lights:
               state: off
           group.bed_accent_lights:
               state: off
