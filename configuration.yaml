@@ -102,7 +102,9 @@ group:
 
 
 wink:
-  access_token: !secret wink_access_token 
+    email: !secret wink_email_address
+    password: !secret wink_password
+
 
 nest:
   client_id: !secret nest_client_id
